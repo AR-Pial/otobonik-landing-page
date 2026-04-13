@@ -1,0 +1,405 @@
+/* Dreams POS / mini ERP landing — Bootstrap 5 companion (matches product UI: navy, orange, teal) */
+:root {
+  --bs-primary: #f97316;
+  --bs-primary-rgb: 249, 115, 22;
+  --brand-navy: #0f2744;
+  --brand-navy-2: #1a3a5c;
+  --brand-teal: #0f766e;
+  --brand-teal-light: #14b8a6;
+  --brand-surface: #f4f7fb;
+  --brand-muted: #64748b;
+  --gradient-hero: linear-gradient(135deg, #0a1628 0%, #0f2744 42%, #134e4a 100%);
+  --shadow-soft: 0 24px 60px rgba(15, 39, 68, 0.1);
+  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 32px 80px rgba(249, 115, 22, 0.18);
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-muted-custom {
+  color: var(--brand-muted) !important;
+}
+
+.navbar-landing {
+  background: rgba(10, 22, 40, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar-landing .nav-link {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 0.5rem 0.85rem !important;
+}
+
+.navbar-landing .nav-link:hover,
+.navbar-landing .nav-link:focus {
+  color: #fff !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand-navy-2), var(--brand-teal));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.hero-section {
+  background: var(--gradient-hero);
+  position: relative;
+  overflow: hidden;
+  padding-top: 5.5rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    padding-top: 6.5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      ellipse 70% 55% at 70% -10%,
+      rgba(249, 115, 22, 0.2),
+      transparent
+    ),
+    radial-gradient(circle at 10% 30%, rgba(20, 184, 166, 0.14), transparent 45%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.hero-lead {
+  color: rgba(226, 232, 240, 0.9);
+  font-size: 1.125rem;
+  max-width: 36rem;
+}
+
+.btn-hero-primary {
+  padding: 0.65rem 1.35rem;
+  font-weight: 600;
+  border-radius: 0.65rem;
+  box-shadow: 0 10px 28px rgba(249, 115, 22, 0.35);
+}
+
+.btn-hero-outline {
+  padding: 0.65rem 1.35rem;
+  font-weight: 600;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-teal {
+  background: var(--brand-teal);
+  border-color: var(--brand-teal);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-teal:hover {
+  background: #0d9488;
+  border-color: #0d9488;
+  color: #fff;
+}
+
+.browser-mockup {
+  border-radius: var(--radius-xl);
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-glow);
+  overflow: hidden;
+}
+
+.browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.browser-dot:nth-child(1) {
+  background: #fb7185;
+}
+.browser-dot:nth-child(2) {
+  background: #fbbf24;
+}
+.browser-dot:nth-child(3) {
+  background: #34d399;
+}
+
+.browser-url {
+  flex: 1;
+  margin-left: 0.75rem;
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.9);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.browser-body img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section-padding {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.section-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--brand-navy);
+}
+
+.feature-card {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  height: 100%;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  background: #fff;
+}
+
+.feature-card:hover {
+  border-color: rgba(249, 115, 22, 0.45);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  background: rgba(249, 115, 22, 0.12);
+  color: var(--bs-primary);
+}
+
+.feature-icon.teal {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--brand-teal);
+}
+
+.feature-icon.navy {
+  background: rgba(15, 39, 68, 0.1);
+  color: var(--brand-navy);
+}
+
+.bg-surface {
+  background: var(--brand-surface);
+}
+
+.stat-card {
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.stat-value {
+  font-weight: 800;
+  font-size: 1.75rem;
+  color: var(--brand-navy);
+  letter-spacing: -0.02em;
+}
+
+.pricing-card {
+  border-radius: var(--radius-xl);
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  height: 100%;
+  background: #fff;
+  position: relative;
+}
+
+.pricing-card.featured {
+  border-color: var(--bs-primary);
+  box-shadow: 0 24px 48px rgba(249, 115, 22, 0.12);
+}
+
+.pricing-card .price-tag {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--brand-navy);
+}
+
+.pricing-card .price-period {
+  color: var(--brand-muted);
+  font-size: 0.9375rem;
+}
+
+.testimonial-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  background: #fff;
+  height: 100%;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-navy-2), var(--brand-teal-light));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.cta-strip {
+  background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-navy-2) 45%, var(--brand-teal) 100%);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-strip::after {
+  content: "";
+  position: absolute;
+  right: -10%;
+  top: -40%;
+  width: 50%;
+  height: 180%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.2), transparent 55%);
+  pointer-events: none;
+}
+
+.footer-landing {
+  background: #071018;
+  color: rgba(226, 232, 240, 0.75);
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.footer-landing a {
+  color: rgba(226, 232, 240, 0.75);
+  text-decoration: none;
+}
+
+.footer-landing a:hover {
+  color: #fff;
+}
+
+.logo-strip {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.screenshot-thumb {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease;
+}
+
+.screenshot-thumb:hover {
+  transform: scale(1.01);
+}
+
+.screenshot-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(249, 115, 22, 0.08);
+  color: var(--brand-navy);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 115, 22, 0.2);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.pill-soft {
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--brand-teal);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}

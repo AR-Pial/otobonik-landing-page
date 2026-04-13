@@ -1,0 +1,526 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-landing fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'home' %}">
+          <span class="brand-icon"><i class="bi bi-bag-check-fill"></i></span>
+          <span>{{ SITE_NAME }}</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+          aria-controls="navMain"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#product">Product tour</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-outline-light btn-sm px-3" href="#demo">Book demo</a>
+            </li>
+            <li class="nav-item ms-lg-1">
+              <a class="btn btn-primary btn-sm px-3 btn-hero-primary" href="#pricing">Start trial</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section" id="top">
+      <div class="container position-relative" style="z-index: 1">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-reveal>
+            <span class="hero-badge mb-3"><i class="bi bi-stars"></i> Mini ERP for shops &amp; SMBs</span>
+            <h1 class="hero-title display-4 mb-3">Run sales, stock, and accounts in one calm workspace.</h1>
+            <p class="hero-lead mb-4">{{ SITE_TAGLINE }}</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-primary btn-lg btn-hero-primary" href="#pricing">View plans</a>
+              <a class="btn btn-lg btn-hero-outline" href="#product"><i class="bi bi-play-circle me-1"></i> See product tour</a>
+            </div>
+            <div class="d-flex flex-wrap gap-4 mt-4 small text-white-50">
+              <div><i class="bi bi-check-circle-fill text-success me-1"></i> Multi-store ready</div>
+              <div><i class="bi bi-check-circle-fill text-success me-1"></i> Fast POS checkout</div>
+              <div><i class="bi bi-check-circle-fill text-success me-1"></i> VAT-aware totals</div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-reveal>
+            <div class="browser-mockup">
+              <div class="browser-chrome">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-url">app.example.com/dashboard</span>
+              </div>
+              <div class="browser-body bg-white">
+                <img
+                  src="{% static 'landing/img/dashboard.png' %}"
+                  alt="{{ SITE_NAME }} dashboard with KPIs, charts, and recent products"
+                  width="1200"
+                  height="675"
+                  class="w-100"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4 border-bottom bg-white">
+      <div class="container">
+        <p class="text-center text-muted-custom small mb-3 text-uppercase letter-spacing-1">
+          Built for teams who outgrow spreadsheets
+        </p>
+        <div class="row row-cols-2 row-cols-md-4 g-3 text-center logo-strip">
+          <div class="col small fw-semibold text-secondary">Retail</div>
+          <div class="col small fw-semibold text-secondary">Electronics</div>
+          <div class="col small fw-semibold text-secondary">Fashion</div>
+          <div class="col small fw-semibold text-secondary">Pharmacy</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-surface" id="features" data-reveal>
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span class="pill-soft mb-2 d-inline-block">Modules</span>
+            <h2 class="section-title display-6 mb-3">Everything your counter and back-office share one truth.</h2>
+            <p class="text-muted-custom lead mb-0">
+              Inventory, purchasing, POS, and finance stay aligned — so managers see what cashiers sell in real time.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon mb-3"><i class="bi bi-shop-window"></i></div>
+              <h3 class="h5 fw-bold">Point of sale</h3>
+              <p class="text-muted-custom mb-0">
+                Fast customer and item search, discounts, VAT, change calculation, and payment types — tuned for busy counters.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon teal mb-3"><i class="bi bi-box-seam"></i></div>
+              <h3 class="h5 fw-bold">Inventory &amp; products</h3>
+              <p class="text-muted-custom mb-0">
+                SKUs, barcodes, stock on hand in the cart, and recent products on the dashboard so you never sell what you do not have.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon navy mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+              <h3 class="h5 fw-bold">Purchase &amp; sales insight</h3>
+              <p class="text-muted-custom mb-0">
+                Compare purchase vs sales trends, track suppliers and customers, and spotlight discount impact at a glance.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon mb-3"><i class="bi bi-wallet2"></i></div>
+              <h3 class="h5 fw-bold">Cash, bank &amp; VAT</h3>
+              <p class="text-muted-custom mb-0">
+                Live tiles for cash and bank balances, VAT payable, income, expenses, and net profit — accountant-friendly summaries.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon teal mb-3"><i class="bi bi-people"></i></div>
+              <h3 class="h5 fw-bold">Customers &amp; suppliers</h3>
+              <p class="text-muted-custom mb-0">
+                Dedicated views for customer and supplier totals with purchase invoice tracking across branches.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon navy mb-3"><i class="bi bi-diagram-3"></i></div>
+              <h3 class="h5 fw-bold">Multi-store</h3>
+              <p class="text-muted-custom mb-0">
+                Switch stores from the header for separate stock and sales while leadership keeps a consolidated pulse on performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white" id="product" data-reveal>
+      <div class="container">
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-5">
+            <span class="pill-soft mb-2 d-inline-block">Product tour</span>
+            <h2 class="section-title display-6 mb-3">A dashboard your owner checks daily.</h2>
+            <p class="text-muted-custom lead">
+              KPI cards mirror the way retailers think — cash position, bank, VAT, profit, customers, suppliers, and purchase health on
+              one screen.
+            </p>
+            <ul class="list-unstyled text-muted-custom small mb-0">
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Color-coded tiles for quick scanning</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Recent products with imagery and pricing</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Purchase vs sales chart for trend conversations</li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <div class="screenshot-thumb">
+              <img
+                src="{% static 'landing/img/dashboard.png' %}"
+                alt="Executive dashboard preview"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center g-5 flex-lg-row-reverse">
+          <div class="col-lg-5">
+            <h2 class="section-title display-6 mb-3">POS that keeps checkout honest and fast.</h2>
+            <p class="text-muted-custom lead">
+              Search-first flows, visible stock, invoice numbering, best-selling shortcuts, and a payment panel that shows due and change
+              clearly for staff and shoppers alike.
+            </p>
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="badge rounded-pill text-bg-light border">Barcode &amp; SKU search</span>
+              <span class="badge rounded-pill text-bg-light border">Line &amp; basket discounts</span>
+              <span class="badge rounded-pill text-bg-light border">Multi-payment ready</span>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="screenshot-thumb">
+              <img
+                src="{% static 'landing/img/pos.png' %}"
+                alt="Point of sale workspace preview"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-surface" data-reveal>
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-value text-primary">99.9%</div>
+              <div class="text-muted-custom small">Uptime target</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-value">&lt;30s</div>
+              <div class="text-muted-custom small">Average sale time</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-value">24/7</div>
+              <div class="text-muted-custom small">Cloud access</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-value">1 hub</div>
+              <div class="text-muted-custom small">POS + ERP data</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white" id="how" data-reveal>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title display-6">Launch in three calm steps</h2>
+          <p class="text-muted-custom lead mb-0">White-glove onboarding keeps your team selling without a big-bang cutover.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 h-100 border rounded-4 bg-surface">
+              <div class="display-6 fw-bold text-primary mb-2">01</div>
+              <h3 class="h5 fw-bold">Connect your catalog</h3>
+              <p class="text-muted-custom mb-0">Import SKUs, barcodes, and opening stock — we validate duplicates before go-live.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 h-100 border rounded-4 bg-surface">
+              <div class="display-6 fw-bold text-primary mb-2">02</div>
+              <h3 class="h5 fw-bold">Train the floor</h3>
+              <p class="text-muted-custom mb-0">Role-based walkthroughs for cashiers vs managers, with sandbox invoices for practice.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 h-100 border rounded-4 bg-surface">
+              <div class="display-6 fw-bold text-primary mb-2">03</div>
+              <h3 class="h5 fw-bold">Go live with support</h3>
+              <p class="text-muted-custom mb-0">Hypercare week with shared Slack or WhatsApp channel for rapid answers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-surface" id="pricing" data-reveal>
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="section-title display-6">Simple SaaS pricing</h2>
+          <p class="text-muted-custom lead">Pick a lane today — upgrade when you add registers or branches.</p>
+          <div class="d-inline-flex align-items-center gap-2 mt-3">
+            <span class="small text-muted-custom">Monthly</span>
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" id="billingToggle" style="width: 2.75rem; height: 1.35rem" />
+            </div>
+            <span class="small text-muted-custom">Yearly <span class="text-success fw-semibold">(save 20%)</span></span>
+          </div>
+        </div>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4">
+            <div class="pricing-card">
+              <h3 class="h5 fw-bold mb-2">Starter</h3>
+              <p class="text-muted-custom small">Single store, two registers, essentials.</p>
+              <div class="my-3">
+                <span class="price-tag" data-price-monthly="$49" data-price-yearly="$39">$49</span>
+                <span class="price-period"> / register / mo</span>
+              </div>
+              <ul class="list-unstyled small text-muted-custom mb-4">
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>POS + inventory</li>
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Basic finance tiles</li>
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Email support (48h)</li>
+              </ul>
+              <a class="btn btn-outline-primary w-100 fw-semibold" href="#demo">Start trial</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="pricing-card featured">
+              <span class="badge bg-primary position-absolute top-0 end-0 m-3">Most popular</span>
+              <h3 class="h5 fw-bold mb-2">Growth</h3>
+              <p class="text-muted-custom small">Multi-store, advanced reporting, priority support.</p>
+              <div class="my-3">
+                <span class="price-tag" data-price-monthly="$99" data-price-yearly="$79">$99</span>
+                <span class="price-period"> / register / mo</span>
+              </div>
+              <ul class="list-unstyled small text-muted-custom mb-4">
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Everything in Starter</li>
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Multi-store switching</li>
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Purchase vs sales analytics</li>
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Chat support (12h)</li>
+              </ul>
+              <a class="btn btn-primary w-100 fw-semibold btn-hero-primary" href="#demo">Talk to sales</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="pricing-card">
+              <h3 class="h5 fw-bold mb-2">Enterprise</h3>
+              <p class="text-muted-custom small">Custom rollout, SSO, dedicated success.</p>
+              <div class="my-3">
+                <span class="price-tag">Let&apos;s talk</span>
+                <span class="price-period d-block mt-1">Volume discounts for 15+ lanes</span>
+              </div>
+              <ul class="list-unstyled small text-muted-custom mb-4">
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Implementation manager</li>
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Custom integrations</li>
+                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>24/7 phone option</li>
+              </ul>
+              <a class="btn btn-teal w-100 fw-semibold" href="#demo">Book strategy call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white" data-reveal>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title display-6">Loved by operators on the floor</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="mb-3">
+                “We finally stopped exporting CSVs every night. Managers open the dashboard like their morning newspaper.”
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar">RK</div>
+                <div>
+                  <div class="fw-semibold">Rafiq Karim</div>
+                  <div class="small text-muted-custom">COO, Metro Gadgets</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="mb-3">
+                “Cashiers love the best-sellers rail — it nudges attach sales without a script. Finance loves the VAT clarity.”
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar">NS</div>
+                <div>
+                  <div class="fw-semibold">Nadia Siddiqui</div>
+                  <div class="small text-muted-custom">Owner, Bloom Pharmacy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="mb-3">
+                “Multi-store switching is instant. HQ sees purchase vs sales trends before weekly leadership calls.”
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar">TH</div>
+                <div>
+                  <div class="fw-semibold">Tanvir Hossain</div>
+                  <div class="small text-muted-custom">Finance lead, Urban Threads</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-surface" id="faq" data-reveal>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="section-title display-6 text-center mb-4">Questions, answered</h2>
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Do I need separate POS hardware?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted-custom">
+                    {{ SITE_NAME }} runs in the browser on modern PCs or tablets. Many teams pair it with USB scanners and receipt
+                    printers they already own.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Can we start with one branch and expand later?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted-custom">
+                    Yes. Keep a single store live while you configure inventory for the next site, then enable multi-store controls when you
+                    are ready — no messy re-platform.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Is my data backed up?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted-custom">
+                    Cloud tenants receive automated encrypted backups and region pinning. Self-hosted bundles are available on Enterprise
+                    plans.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white" id="demo" data-reveal>
+      <div class="container">
+        <div class="cta-strip text-center position-relative" style="z-index: 1">
+          <h2 class="display-6 fw-bold mb-3">See {{ SITE_NAME }} on your own numbers</h2>
+          <p class="lead mb-4 mx-auto" style="max-width: 36rem">
+            Bring a sample SKU file — we will stage your catalog in a private sandbox and walk through POS plus reporting live.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a class="btn btn-light btn-lg text-primary fw-semibold px-4" href="mailto:{{ CONTACT_EMAIL }}?subject=Demo%20request"
+              >Email {{ CONTACT_EMAIL }}</a
+            >
+            <a class="btn btn-outline-light btn-lg fw-semibold px-4" href="#pricing">Compare plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-landing">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold">
+            <span class="brand-icon"><i class="bi bi-bag-check-fill"></i></span> {{ SITE_NAME }}
+          </div>
+          <p class="small mb-0">Cloud mini ERP with POS for teams who want retail speed without enterprise bloat.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="text-white-50 small text-uppercase mb-2">Product</div>
+          <ul class="list-unstyled small">
+            <li class="mb-1"><a href="#features">Features</a></li>
+            <li class="mb-1"><a href="#product">Tour</a></li>
+            <li class="mb-1"><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="text-white-50 small text-uppercase mb-2">Company</div>
+          <ul class="list-unstyled small">
+            <li class="mb-1"><a href="#demo">Contact</a></li>
+            <li class="mb-1"><a href="#">Security</a></li>
+            <li class="mb-1"><a href="#">Status</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div class="text-white-50 small text-uppercase mb-2">Stay in the loop</div>
+          <form class="d-flex flex-column flex-sm-row gap-2" action="#" method="get">
+            <label class="visually-hidden" for="newsletterEmail">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="newsletterEmail"
+              placeholder="you@store.com"
+              autocomplete="email"
+              disabled
+            />
+            <button type="button" class="btn btn-primary" disabled>Coming soon</button>
+          </form>
+          <p class="small text-white-50 mt-2 mb-0">Newsletter signup wires to your marketing tool later — form is static for now.</p>
+        </div>
+      </div>
+      <hr class="border-secondary my-4" />
+      <div class="d-flex flex-wrap justify-content-between gap-2 small">
+        <span>© {% now "Y" %} {{ SITE_NAME }}. All rights reserved.</span>
+        <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+{% endblock %}

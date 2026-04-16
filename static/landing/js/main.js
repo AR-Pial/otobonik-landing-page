@@ -45,7 +45,7 @@
     window.addEventListener(
       "scroll",
       function () {
-        nav.style.background = window.scrollY > 40 ? "rgba(10, 22, 40, 0.96)" : "rgba(10, 22, 40, 0.88)";
+        nav.style.background = window.scrollY > 40 ? "rgba(255, 255, 255, 0.98)" : "rgba(255, 255, 255, 0.96)";
       },
       { passive: true }
     );

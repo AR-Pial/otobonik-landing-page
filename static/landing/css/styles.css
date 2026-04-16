@@ -1,18 +1,21 @@
 /* Otobonik landing — Bootstrap 5 companion */
 :root {
-  --bs-primary: #ffb054;
-  --bs-primary-rgb: 255, 176, 84;
+  --bs-primary: #e0882a;
+  --bs-primary-rgb: 224, 136, 42;
   --brand-navy: #103e5a;
   --brand-navy-2: #1d5475;
   --brand-teal: #1d5475;
   --brand-teal-light: #2b6f97;
   --brand-surface: #f4f7fb;
   --brand-muted: #64748b;
-  --gradient-hero: linear-gradient(135deg, #0b2f46 0%, #103e5a 52%, #1d5475 100%);
+  --gradient-hero: linear-gradient(135deg, #103e5a 0%, #103e5a 100%);
   --shadow-soft: 0 24px 60px rgba(15, 39, 68, 0.1);
-  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 32px 80px rgba(255, 176, 84, 0.22);
+  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 32px 80px rgba(224, 136, 42, 0.22);
   --radius-lg: 1rem;
   --radius-xl: 1.25rem;
+  --btn-text-orange: rgb(224, 136, 42);
+  --btn-bg-navy: rgb(20, 43, 74);
+  --btn-bg-navy-hover: rgb(16, 36, 62);
 }
 
 html {
@@ -30,13 +33,13 @@ body {
 }
 
 .navbar-landing {
-  background: rgba(10, 22, 40, 0.88);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(16, 62, 90, 0.1);
 }
 
 .navbar-landing .nav-link {
-  color: rgba(255, 255, 255, 0.78) !important;
+  color: rgba(16, 62, 90, 0.82) !important;
   font-weight: 500;
   font-size: 0.9375rem;
   padding: 0.5rem 0.85rem !important;
@@ -44,7 +47,7 @@ body {
 
 .navbar-landing .nav-link:hover,
 .navbar-landing .nav-link:focus {
-  color: #fff !important;
+  color: var(--brand-navy) !important;
 }
 
 .navbar-brand {
@@ -53,17 +56,27 @@ body {
 }
 
 .brand-logo {
-  height: 44px;
+  height: 62px;
   width: auto;
   display: block;
 }
 
 .brand-logo-footer {
-  height: 38px;
+  height: 56px;
+}
+
+@media (max-width: 991.98px) {
+  .brand-logo {
+    height: 50px;
+  }
+
+  .brand-logo-footer {
+    height: 46px;
+  }
 }
 
 .hero-section {
-  background: var(--gradient-hero);
+  background: #f4f7fb;
   position: relative;
   overflow: hidden;
   padding-top: 5.5rem;
@@ -81,12 +94,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-      ellipse 70% 55% at 70% -10%,
-      rgba(255, 176, 84, 0.26),
-      transparent
-    ),
-    radial-gradient(circle at 10% 30%, rgba(29, 84, 117, 0.2), transparent 45%);
+  background-image: radial-gradient(ellipse 70% 55% at 70% -10%, rgba(224, 136, 42, 0.12), transparent),
+    radial-gradient(circle at 10% 30%, rgba(16, 62, 90, 0.08), transparent 45%);
   pointer-events: none;
 }
 
@@ -96,9 +105,9 @@ body {
   gap: 0.5rem;
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #e2e8f0;
+  background: rgba(16, 62, 90, 0.06);
+  border: 1px solid rgba(16, 62, 90, 0.14);
+  color: var(--brand-navy);
   font-size: 0.8125rem;
   font-weight: 500;
 }
@@ -107,11 +116,11 @@ body {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: #fff;
+  color: var(--brand-navy);
 }
 
 .hero-lead {
-  color: rgba(226, 232, 240, 0.9);
+  color: #475569;
   font-size: 1.125rem;
   max-width: 36rem;
 }
@@ -120,21 +129,21 @@ body {
   padding: 0.65rem 1.35rem;
   font-weight: 600;
   border-radius: 0.65rem;
-  box-shadow: 0 10px 28px rgba(255, 176, 84, 0.4);
+  box-shadow: 0 10px 28px rgba(224, 136, 42, 0.42);
 }
 
 .btn-hero-outline {
   padding: 0.65rem 1.35rem;
   font-weight: 600;
   border-radius: 0.65rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: #fff;
+  border: 1px solid rgba(16, 62, 90, 0.3);
+  color: var(--brand-navy);
 }
 
 .btn-hero-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
-  color: #fff;
+  background: rgba(16, 62, 90, 0.08);
+  border-color: var(--brand-navy);
+  color: var(--brand-navy);
 }
 
 .btn-teal {
@@ -148,6 +157,38 @@ body {
   background: #0d9488;
   border-color: #0d9488;
   color: #fff;
+}
+
+/* Unified button theme requested by brand guide */
+.btn-primary,
+.btn-outline-primary,
+.btn-hero-primary,
+.btn-hero-outline,
+.btn-teal,
+.btn-light,
+.btn-outline-light {
+  background-color: var(--btn-bg-navy) !important;
+  border-color: var(--btn-bg-navy) !important;
+  color: var(--btn-text-orange) !important;
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover,
+.btn-hero-primary:hover,
+.btn-hero-outline:hover,
+.btn-teal:hover,
+.btn-light:hover,
+.btn-outline-light:hover,
+.btn-primary:focus,
+.btn-outline-primary:focus,
+.btn-hero-primary:focus,
+.btn-hero-outline:focus,
+.btn-teal:focus,
+.btn-light:focus,
+.btn-outline-light:focus {
+  background-color: var(--btn-bg-navy-hover) !important;
+  border-color: var(--btn-bg-navy-hover) !important;
+  color: var(--btn-text-orange) !important;
 }
 
 .browser-mockup {
@@ -177,7 +218,7 @@ body {
   background: #fb7185;
 }
 .browser-dot:nth-child(2) {
-  background: #fbbf24;
+  background: #e0882a;
 }
 .browser-dot:nth-child(3) {
   background: #34d399;
@@ -221,7 +262,7 @@ body {
 }
 
 .feature-card:hover {
-  border-color: rgba(255, 176, 84, 0.55);
+  border-color: rgba(224, 136, 42, 0.55);
   box-shadow: var(--shadow-soft);
   transform: translateY(-2px);
 }
@@ -234,7 +275,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
-  background: rgba(255, 176, 84, 0.2);
+  background: rgba(224, 136, 42, 0.2);
   color: var(--bs-primary);
 }
 
@@ -277,7 +318,7 @@ body {
 
 .pricing-card.featured {
   border-color: var(--bs-primary);
-  box-shadow: 0 24px 48px rgba(255, 176, 84, 0.2);
+  box-shadow: 0 24px 48px rgba(224, 136, 42, 0.2);
 }
 
 .pricing-card .price-tag {
@@ -314,22 +355,23 @@ body {
 }
 
 .cta-strip {
-  background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-navy-2) 45%, var(--brand-teal) 100%);
+  background: #f4f7fb;
   border-radius: var(--radius-xl);
   padding: 3rem 2rem;
-  color: #fff;
+  color: var(--brand-navy);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(16, 62, 90, 0.12);
 }
 
 .cta-strip::after {
-  content: "";
+  content: none;
   position: absolute;
   right: -10%;
   top: -40%;
   width: 50%;
   height: 180%;
-  background: radial-gradient(circle, rgba(255, 176, 84, 0.26), transparent 55%);
+  background: radial-gradient(circle, rgba(224, 136, 42, 0.26), transparent 55%);
   pointer-events: none;
 }
 
@@ -373,13 +415,13 @@ body {
 }
 
 .accordion-button:not(.collapsed) {
-  background: rgba(255, 176, 84, 0.16);
+  background: rgba(224, 136, 42, 0.16);
   color: var(--brand-navy);
   box-shadow: none;
 }
 
 .accordion-button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 176, 84, 0.35);
+  box-shadow: 0 0 0 0.2rem rgba(224, 136, 42, 0.35);
 }
 
 [data-reveal] {

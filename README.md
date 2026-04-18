@@ -15,7 +15,7 @@ python -m venv .venv
 ### Windows (PowerShell)
 
 ```bash
-.\.venv\Scripts\Activate.ps1
+venv\Scripts\activate
 pip install -r requirements.txt
 ```
 

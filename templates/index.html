@@ -502,7 +502,9 @@
     <section class="section-padding bg-white" id="demo" data-reveal>
       <div class="container">
         <div class="cta-strip text-center position-relative" style="z-index: 1">
-          <h2 class="display-6 fw-bold mb-3">See Otobonik on your own numbers</h2>
+          <h2 class="display-6 fw-bold mb-3">
+            See <span class="brand-highlight"><span class="brand-oto">oto</span><span class="brand-bonik">bonik</span></span> on your own numbers
+          </h2>
           <p class="lead mb-4 mx-auto" style="max-width: 36rem">
             Bring a sample SKU file — we will walk through inventory, sales, purchase, POS and Finance live.
           </p>
@@ -510,7 +512,7 @@
             <a class="btn btn-primary btn-lg fw-semibold px-4" href="mailto:{{ CONTACT_EMAIL }}?subject=Demo%20request"
               >Email {{ CONTACT_EMAIL }}</a
             >
-            <a class="btn btn-outline-primary btn-lg fw-semibold px-4" href="#pricing">Compare plans</a>
+            {% comment %} <a class="btn btn-outline-primary btn-lg fw-semibold px-4" href="#pricing">Compare plans</a> {% endcomment %}
           </div>
         </div>
       </div>

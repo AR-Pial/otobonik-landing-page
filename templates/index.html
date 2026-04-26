@@ -42,8 +42,8 @@
         <div class="row align-items-center g-5">
           <div class="col-lg-6" data-reveal>
             <span class="hero-badge mb-3"><i class="bi bi-stars"></i> One stop solution for your Business, SMEs, Shops and more</span>
-            <h1 class="hero-title display-4 mb-3">Manage Your Biz from Home.</h1>
-            <p class="hero-lead mb-4">{{ SITE_TAGLINE }}</p>
+            <h1 class="hero-title display-4 mb-3">Manage Your Biz from Home</h1>
+            <p class="hero-lead mb-4">{{ SITE_TAGLINE|linebreaksbr }}</p>
             <div class="d-flex flex-wrap gap-3">
               <a class="btn btn-primary btn-lg btn-hero-primary" href="#pricing">View plans</a>
               <a class="btn btn-lg btn-hero-outline" href="#product"><i class="bi bi-play-circle me-1"></i> See product tour</a>
@@ -60,7 +60,7 @@
                 <span class="browser-dot"></span>
                 <span class="browser-dot"></span>
                 <span class="browser-dot"></span>
-                <span class="browser-url">app.example.com/dashboard</span>
+                <span class="browser-url">app.otobonik.com/dashboard</span>
               </div>
               <div class="browser-body bg-white">
                 <img
@@ -79,16 +79,38 @@
       </div>
     </section>
 
-    <section class="py-4 border-bottom bg-white">
+    <section class="py-5 border-bottom bg-white">
       <div class="container">
-        <p class="text-center text-muted-custom small mb-3 text-uppercase letter-spacing-1">
-          Designed with modern architecture for teams that require scalable operations beyond manual work and legacy software.
-        </p>
-        <div class="row row-cols-2 row-cols-md-4 g-3 text-center logo-strip">
-          <div class="col small fw-semibold text-muted-custom">Retail</div>
-          <div class="col small fw-semibold text-muted-custom">Electronics</div>
-          <div class="col small fw-semibold text-muted-custom">Fashion</div>
-          <div class="col small fw-semibold text-muted-custom">Pharmacy</div>
+        <div class="industry-strip mx-auto">
+          <p class="text-center text-muted-custom  fw-semibold mb-4">
+            Designed with modern architecture for teams that require scalable operations beyond manual work and legacy software.
+          </p>
+          <div class="row row-cols-2 row-cols-lg-4 g-3 text-center">
+            <div class="col">
+              <div class="industry-card h-100">
+                <i class="bi bi-shop industry-icon"></i>
+                <div class="fw-bold mt-2">Retail</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="industry-card h-100">
+                <i class="bi bi-phone industry-icon"></i>
+                <div class="fw-bold mt-2">Electronics</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="industry-card h-100">
+                <i class="bi bi-bag-check industry-icon"></i>
+                <div class="fw-bold mt-2">Fashion</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="industry-card h-100">
+                <i class="bi bi-heart-pulse industry-icon"></i>
+                <div class="fw-bold mt-2">Pharmacy</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -284,7 +306,8 @@
       </div>
     </section>
 
-    <section class="section-padding bg-surface" id="pricing" data-reveal>
+    <!-- Pricing starts -->
+    {% comment %} <section class="section-padding bg-surface" id="pricing" data-reveal>
       <div class="container">
         <div class="text-center mb-4">
           <h2 class="section-title display-6">Simple SaaS pricing</h2>
@@ -350,7 +373,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> {% endcomment %}
+    <!-- Pricing ends -->
 
     <section class="section-padding bg-white" data-reveal>
       <div class="container">

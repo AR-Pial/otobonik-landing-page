@@ -1,7 +1,7 @@
 def site_metadata(request):
     return {
-        "SITE_NAME": "Otobonik",
-        "SITE_TAGLINE": "Inventory, sales, purchasing, POS and Finance in one place. Managers see what cashiers sell in real time, and owners see the full business picture.",
-        "CONTACT_EMAIL": "hello@example.com",
+        "SITE_NAME": "otobonik",
+        "SITE_TAGLINE": "A unified cloud platform for Inventory, Sales, Purchase, HRM, Accounting and POS operations.Managers see what cashiers sell in real time, and owners see the full business picture.",
+        "CONTACT_EMAIL": "info@otobonik.com",
     }
 

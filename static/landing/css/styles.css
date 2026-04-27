@@ -442,7 +442,7 @@ body {
   border: 1px solid rgba(20, 43, 74, 0.16);
   border-radius: 0.9rem;
   background: #ffffff;
-  padding: 1.1rem 0.8rem;
+  padding: 2rem;
   transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 

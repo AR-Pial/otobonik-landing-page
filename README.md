@@ -9,7 +9,7 @@ Simple Django-based landing page for Otobonik.
 ## Install
 
 ```bash
-python -m venv .venv
+python -m venv venv
 ```
 
 ### Windows (PowerShell)
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ### macOS / Linux
 
 ```bash
-source .venv/bin/activate
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 

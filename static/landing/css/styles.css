@@ -548,3 +548,11 @@ body {
 .text-white-50 {
   color: var(--bs-primary) !important;
 }
+
+.custom-bg {
+  background-color: rgba(224, 136, 42, 0.1) !important;
+}
+
+.mb-8 {
+  margin-bottom: 8rem !important;
+}

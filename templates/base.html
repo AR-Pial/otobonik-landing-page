@@ -9,6 +9,26 @@
       name="description"
       content="{% block meta_description %}{{ SITE_TAGLINE }}{% endblock %}"
     />
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'landing/img/favicon.ico' %}">
+
+    <!-- SVG (modern browsers) -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg"> -->
+
+    <!-- PNG fallback -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'landing/img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'landing/img/favicon-16x16.png' %}">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'landing/img/apple-touch-icon.png' %}">
+
+    <!-- Android / PWA -->
+    <link rel="manifest" href="{% static 'landing/img/site.webmanifest' %}">
+
+    <!-- Theme color (browser UI color) -->
+    <meta name="theme-color" content="#e0882a">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
